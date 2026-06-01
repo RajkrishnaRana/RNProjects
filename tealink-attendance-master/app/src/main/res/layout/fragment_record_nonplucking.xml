@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/strut"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/section_label"
+        style="@style/InputLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/strut"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/section_name" />
+
+    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+        android:id="@+id/section"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/section_label"
+        android:layout_alignRight="@id/strut"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:id="@+id/kamjari_label"
+        style="@style/InputLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/strut"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:text="Kamjari Name" />
+
+    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+        android:id="@+id/kamjari"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/kamjari_label"
+        android:layout_alignLeft="@id/strut"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:id="@+id/batch_label"
+        style="@style/InputLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/section"
+        android:layout_alignRight="@id/strut"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/batch_name" />
+
+    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+        android:id="@+id/batch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/batch_label"
+        android:layout_alignRight="@id/strut"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:id="@+id/shift_label"
+        style="@style/InputLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/kamjari"
+        android:layout_alignLeft="@id/strut"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:text="@string/shift_name" />
+
+    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+        android:id="@+id/shift"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/shift_label"
+        android:layout_alignLeft="@id/strut"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:id="@+id/processedWorkerCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/shift"
+        android:layout_marginBottom="10dip"
+        android:paddingLeft="25dip"
+        android:text="@string/_0"
+        android:textColor="@color/colorAccent"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/processedWorkerCount"
+        android:layout_toRightOf="@id/processedWorkerCount"
+        android:paddingLeft="10dip"
+        android:paddingBottom="10dp"
+        android:text="@string/worker_s_logged"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/worker_code_input_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/select_worker">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/worker_code_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/worker_code"
+                    android:imeActionLabel="@string/worker_code"
+                    android:inputType="textNoSuggestions"
+                    android:textColor="@color/colorPrimaryDark" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/select_worker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/manual_save"
+                android:theme="@style/Button" />
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/worker_img_capture"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_weight="1"
+            android:drawableRight="@drawable/round_perm_camera_white_24dp"
+            android:text="@string/identify_user_capture"
+            android:theme="@style/Button" />
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:visibility="gone"
+        android:id="@+id/worker_img_capture_copy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:drawableRight="@drawable/round_perm_camera_white_24dp"
+        android:text="@string/identify_user_capture"
+        android:theme="@style/Button" />
+
+    <ImageView
+        android:id="@+id/nfc_card_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/container"
+        android:layout_below="@id/processedWorkerCount"
+        android:contentDescription="@string/identify_worker"
+        android:src="@drawable/identify" />
+
+</RelativeLayout>

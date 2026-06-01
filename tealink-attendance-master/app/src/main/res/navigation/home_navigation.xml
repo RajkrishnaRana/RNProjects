@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/home_navigation"
+    app:startDestination="@id/nav_home">
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="in.illimitable.stf.fragments.Dashboard"
+        android:label="@string/home">
+    </fragment>
+    <fragment
+        android:id="@+id/nav_mark_time"
+        android:name="in.illimitable.stf.fragments.MarkTimeFragment"
+        android:label="@string/mark_time">
+    </fragment>
+    <fragment
+        android:id="@+id/nav_record_plucking"
+        android:name="in.illimitable.stf.fragments.RecordPluckingFragment"
+        android:label="@string/store_plucking_details">
+    </fragment>
+    <fragment
+        android:id="@+id/nav_record_non_plucking"
+        android:name="in.illimitable.stf.fragments.RecordNonpluckingFragment"
+        android:label="@string/record_non_plucking_details">
+    </fragment>
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="in.illimitable.stf.fragments.SettingsFragment"
+        android:label="@string/settings">
+    </fragment>
+    <fragment
+        android:id="@+id/nav_workers"
+        android:name="in.illimitable.stf.fragments.WorkersFragment"
+        android:label="@string/view_workers">
+    </fragment>
+    <fragment
+        android:id="@+id/nav_worker_details"
+        android:name="in.illimitable.stf.fragments.WorkerDetailsFragment"
+        android:label="@string/worker_details">
+        <argument
+            android:name="workerData"
+            app:argType="in.illimitable.util.ParcelableJsonObject"/>
+    </fragment>
+    <fragment
+        android:id="@+id/nav_mark_out_time"
+        android:name="in.illimitable.stf.fragments.MarkTimeFragment"
+        android:label="@string/mark_out_time">
+        <argument
+            android:name="title" app:argType="string" android:defaultValue="Mark Out Time" />
+    </fragment>
+</navigation>

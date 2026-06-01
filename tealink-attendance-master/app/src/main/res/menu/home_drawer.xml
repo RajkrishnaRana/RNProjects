@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_home"
+            android:title="@string/home" />
+        <item
+            android:id="@+id/nav_mark_time"
+            android:icon="@drawable/round_access_time_black_24dp"
+            android:title="@string/mark_time" />
+        <item
+            android:id="@+id/nav_record_plucking"
+            android:icon="@drawable/round_tea_leaf_black_24dp"
+            android:title="@string/store_plucking_details" />
+        <item
+            android:id="@+id/nav_record_non_plucking"
+            android:icon="@drawable/baseline_assignment_black_24dp"
+            android:title="@string/record_non_plucking_details" />
+        <item
+            android:id="@+id/nav_mark_out_time"
+            android:icon="@drawable/round_access_time_black_24dp"
+            android:title="@string/mark_out_time" />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_settings_black_24dp"
+            android:title="@string/settings" />
+    </group>
+
+    <item android:title="Application">
+        <menu>
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_logout_black_24dp"
+                android:title="@string/menu_logout" />
+        </menu>
+    </item>
+
+</menu>

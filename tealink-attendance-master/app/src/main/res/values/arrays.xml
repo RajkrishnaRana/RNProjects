@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="accordion_sections_login">
+        <item>Configuration</item>
+    </string-array>
+
+	<integer-array name="accordion_visibility">
+		<item>0</item>
+	</integer-array>
+</resources>

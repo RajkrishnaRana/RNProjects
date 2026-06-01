@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.percentlayout.widget.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/border_05_rounded"
+    android:layout_marginBottom="3dp"
+    android:padding="5dp"
+    android:clickable="true"
+    android:focusable="true">
+
+    <ImageView
+        android:id="@+id/worker_status"
+        android:visibility="gone"
+        android:src="@drawable/ic_iris_black_24dp"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:paddingTop="5dp"
+        android:paddingRight="10dp"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:id="@+id/worker_name"
+        android:layout_toLeftOf="@id/worker_status"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/worker_code_container"
+        android:textColor="@color/textSecondary"
+        android:textSize="12sp"
+        android:text="@string/worker_code"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/worker_name"
+        app:layout_marginRightPercent="3%"
+        app:layout_widthPercent="27%" />
+
+    <TextView
+        android:id="@+id/worker_code"
+        android:textColor="@color/colorPrimary"
+        android:textSize="17sp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/worker_code_container"
+        app:layout_marginRightPercent="3%"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        app:layout_widthPercent="27%"/>
+
+    <TextView
+        android:id="@+id/worker_book_container"
+        android:textColor="@color/textSecondary"
+        android:textSize="12sp"
+        android:text="@string/worker_book"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_toRightOf="@id/worker_code_container"
+        android:layout_below="@id/worker_name"
+        app:layout_marginRightPercent="3%"
+        app:layout_widthPercent="27%" />
+
+    <TextView
+        android:id="@+id/worker_book"
+        android:textColor="@color/colorPrimary"
+        android:textSize="17sp"
+        android:layout_toRightOf="@id/worker_code_container"
+        android:layout_below="@id/worker_book_container"
+        app:layout_marginRightPercent="3%"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        app:layout_widthPercent="27%"/>
+
+    <TextView
+        android:id="@+id/worker_type_container"
+        android:textColor="@color/textSecondary"
+        android:textSize="12sp"
+        android:text="@string/worker_type"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_toRightOf="@id/worker_book_container"
+        android:layout_below="@id/worker_name"
+        app:layout_widthPercent="40%" />
+
+    <TextView
+        android:id="@+id/worker_type"
+        android:textColor="@color/colorPrimary"
+        android:textSize="17sp"
+        android:layout_toRightOf="@id/worker_book_container"
+        android:layout_below="@id/worker_type_container"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        app:layout_widthPercent="40%"/>
+
+</androidx.percentlayout.widget.PercentRelativeLayout>

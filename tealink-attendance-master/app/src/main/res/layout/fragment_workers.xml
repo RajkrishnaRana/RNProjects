@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/no_workers"
+        android:visibility="gone"
+        android:padding="20dp"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:textColor="@color/colorPrimaryLight"
+        android:text="@string/no_workers_found"
+        android:layout_height="wrap_content" />
+    <Spinner
+        android:padding="5dp"
+        android:overlapAnchor="false"
+        android:id="@+id/worker_books"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/searchBtn"
+        android:layout_below="@id/worker_books"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_search_black_46dp"/>
+    <EditText
+        android:id="@+id/searchText"
+        android:layout_below="@id/worker_books"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/searchBtn"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/worker_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/searchBtn"
+        app:layoutManager="LinearLayoutManager"
+        tools:listitem="@layout/worker_list_item" />
+
+</RelativeLayout>

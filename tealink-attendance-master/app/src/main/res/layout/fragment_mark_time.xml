@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/processedWorkerCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="40sp"
+        android:text="@string/_0"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dip"
+        android:textColor="@color/colorAccent"
+        android:paddingLeft="25dip"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/processedWorkerCount"
+        android:layout_toRightOf="@id/processedWorkerCount"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dip"
+        android:text="@string/worker_s_logged"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/select_worker"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:text="@string/manually_select_worker"
+        android:layout_marginBottom="10dp"
+        android:theme="@style/Button" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/worker_code_input_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/select_worker">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/worker_code_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/worker_code"
+            android:imeActionLabel="@string/worker_code"
+            android:inputType="textNoSuggestions"
+            android:background="@android:color/transparent"
+            android:textColor="@color/colorPrimaryDark" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/worker_img_capture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_above="@id/worker_code_input_container"
+        android:text="@string/identify_user_capture"
+        android:drawableRight="@drawable/round_perm_camera_white_24dp"
+        android:theme="@style/Button" />
+
+    <ImageView
+        android:id="@+id/nfc_card_image"
+        android:layout_below="@id/processedWorkerCount"
+        android:layout_above="@id/worker_img_capture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/identify_worker"
+        android:src="@drawable/identify" />
+
+</RelativeLayout>

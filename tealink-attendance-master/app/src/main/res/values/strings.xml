@@ -1,0 +1,74 @@
+<resources>
+    <string name="app_name">TEAlink Attendance</string>
+    <string name="brand_name_short">TEAlink</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="splash_image">Splash Image</string>
+    <string name="powered_by_illimitable">Powered by Illimitable</string>
+    <string name="brand">TEAlink Attendance</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="login_id">Login Id *</string>
+    <string name="prompt_password">Password *</string>
+    <string name="no_notifications">Currently there are no notifications to display.</string>
+    <string name="home_activity">Home Activity</string>
+    <string name="no_workers_found">No workers found.</string>
+    <string name="worker_code">Worker Code</string>
+    <string name="worker_book">Book</string>
+    <string name="worker_type">Worker Type</string>
+    <string name="worker_subtype">Worker SubType</string>
+    <string name="worker_kamjari">Kamjari</string>
+    <string name="worker_section">Section</string>
+    <string name="update_kamjari">Update Kamjari</string>
+    <string name="update_section">Update Section</string>
+    <string name="server_url">Server URL</string>
+    <string name="no_sections_found">No Sections Found</string>
+    <string name="search_section_hint">Search by section name</string>
+    <string name="section_code">Section Code</string>
+    <string name="connect_scale">Connect scale</string>
+    <string name="weighing_scale_name">Weighing scale name</string>
+    <string name="store_plucking_details">Record Plucking Details</string>
+    <string name="mark_time">Mark Time</string>
+    <string name="export_data">Export Data</string>
+    <string name="standard_deduction_in">Standard Deduction in %</string>
+    <string name="tare_weight_in_kg">Tare Weight in kg</string>
+    <string name="moisture_in">Moisture in %</string>
+    <string name="save_weighing_parameters">Save Weighing Parameters</string>
+    <string name="manually_select_worker">Manually Select Worker</string>
+    <string name="identify_user_newline">Identify User</string>
+    <string name="worker_s_processed">Weighment(s) processed</string>
+    <string name="next">Next</string>
+    <string name="print_records">Print Records</string>
+    <string name="sync">Sync</string>
+    <string name="view_workers">View Workers</string>
+    <string name="attendance_taken_today">Attendance taken today</string>
+    <string name="gl_plucked_today">Green leaf plucked today (in Kg)</string>
+    <string name="div_emp_no">Div Emp No</string>
+    <string name="worker_s_logged">Worker(s) Logged</string>
+    <string name="_0">0</string>
+    <string name="identify_worker">identify worker</string>
+    <string name="record_plucking_one_shot">Record Plucking One Shot?</string>
+    <string name="update_server_url">Update Server URL</string>
+    <string name="save_preference">Save Preference</string>
+    <string name="flash_duration_in_seconds">Flash Duration (In seconds)</string>
+    <string name="save_flash_preference">Save Flash Preference</string>
+    <string name="identify_user_capture">Take Photo</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="section_name">Section Name</string>
+    <string name="record_non_plucking_details">Record Non Plucking Details</string>
+    <string name="clear_data">Clear Data</string>
+    <string name="device_name">Device Name *</string>
+    <string name="manual_save">Manual Save</string>
+    <string name="batch_name">Batch Name</string>
+    <string name="shift_name">Shift Name</string>
+    <string name="disable_download_of_worker_images">Disable download of worker Images?</string>
+    <string name="home">Home</string>
+    <string name="settings">Settings</string>
+    <string name="menu_logout">Sign Out</string>
+    <string name="worker_details">Worker Details</string>
+    <string name="plucking_in_time">Plucking In Time</string>
+    <string name="mark_out_time">Mark Out Time</string>
+</resources>

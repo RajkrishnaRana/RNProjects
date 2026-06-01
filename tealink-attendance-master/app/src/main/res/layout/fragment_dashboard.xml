@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/last_sync_time"
+            android:gravity="center"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="15dp"/>
+
+        <TextView
+            android:id="@+id/today_count"
+            android:textColor="@color/colorAccent"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal"
+            android:textSize="100sp"
+            android:text="0"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/last_sync_time"/>
+        <TextView
+            android:id="@+id/today_count_addon"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:text="@string/attendance_taken_today"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/today_count"/>
+
+        <Switch
+            android:id="@+id/toggle_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/today_count_addon" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/view_workers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/toggle_view"
+            app:layout_constraintStart_toStartOf="parent"
+            android:drawableRight="@drawable/round_view_list_white_24dp"
+            android:theme="@style/Button"
+            android:text="@string/view_workers" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/mark_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/view_workers"
+            app:layout_constraintStart_toStartOf="parent"
+            android:drawableRight="@drawable/round_access_time_white_24dp"
+            android:theme="@style/Button"
+            android:text="@string/mark_time" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/plucking_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/mark_time"
+            app:layout_constraintStart_toStartOf="parent"
+            android:drawableRight="@drawable/round_tea_leaf_white_24dp"
+            android:theme="@style/Button"
+            android:text="@string/store_plucking_details"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/nonplucking_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/plucking_details"
+            app:layout_constraintStart_toStartOf="parent"
+            android:drawableRight="@drawable/baseline_assignment_white_24dp"
+            android:theme="@style/Button"
+            android:text="@string/record_non_plucking_details" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/mark_out_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/nonplucking_details"
+            app:layout_constraintStart_toStartOf="parent"
+            android:drawableRight="@drawable/round_access_time_white_24dp"
+            android:theme="@style/Button"
+            android:text="@string/mark_out_time" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/print_records"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/mark_out_time"
+            app:layout_constraintStart_toStartOf="parent"
+            android:drawableRight="@drawable/round_print_white_24dp"
+            android:theme="@style/Button"
+            android:text="@string/print_records" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/sync_records"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/print_records"
+            app:layout_constraintStart_toStartOf="parent"
+            android:drawableRight="@drawable/round_sync_white_24dp"
+            android:theme="@style/Button"
+            android:text="@string/sync" />
+
+        <View
+            app:layout_constraintTop_toBottomOf="@id/sync_records"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

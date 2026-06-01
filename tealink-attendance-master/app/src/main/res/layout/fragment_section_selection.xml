@@ -1,0 +1,35 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="?attr/actionBarSize">
+
+    <TextView
+        android:id="@+id/no_sections"
+        android:visibility="gone"
+        android:padding="20dp"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:textColor="@color/colorPrimaryLight"
+        android:text="@string/no_sections_found"
+        android:layout_height="wrap_content" />
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_sections"
+        app:defaultQueryHint="@string/search_section_hint"
+        android:iconifiedByDefault="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_below="@id/search_sections"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        app:layoutManager="LinearLayoutManager" />
+
+</RelativeLayout>
