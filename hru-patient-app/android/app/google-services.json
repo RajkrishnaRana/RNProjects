@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "137052532260",
+    "project_id": "hru-today-patient",
+    "storage_bucket": "hru-today-patient.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:137052532260:android:e9f189b0b08bf745cc32b1",
+        "android_client_info": {
+          "package_name": "today.hru.patient"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMBf3oF17G2_UmLEKTcG5jbDtt6YW2Yxg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

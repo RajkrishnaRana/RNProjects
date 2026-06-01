@@ -1,0 +1,77 @@
+import {colors} from '../common/colors';
+import {NotificationFilterProps} from '../types/notificationTypes';
+
+export const notificationFilterData: NotificationFilterProps[] = [
+    {
+        id: 0,
+        isSelected: true,
+        name: 'All',
+        value: '',
+        imgSrc: require('../assets/icons/appointment.png'),
+        color: colors.darkBlue,
+    },
+    {
+        id: 1,
+        isSelected: false,
+        name: 'Booked Appointment',
+        value: 'APPOINTMENT_CREATION',
+        imgSrc: require('../assets/icons/stop-watch.png'),
+        color: colors.green,
+    },
+    {
+        id: 2,
+        isSelected: false,
+        name: 'Reschedule Appointment',
+        value: 'APPOINTMENT_RESCHEDULE',
+        imgSrc: require('../assets/icons/time.png'),
+        color: colors.yellow,
+    },
+    {
+        id: 3,
+        isSelected: false,
+        name: 'Cancelled Appointment',
+        value: 'APPOINTMENT_CANCELATION',
+        imgSrc: require('../assets/icons/cancel-booking.png'),
+        color: colors.red,
+    },
+    {
+        id: 4,
+        isSelected: false,
+        name: 'No-Show Appointment',
+        value: 'APPOINTMENT_NO_SHOW',
+        imgSrc: require('../assets/icons/hidden.png'),
+        color: colors.darkGrey,
+    },
+    {
+        id: 5,
+        isSelected: false,
+        name: 'Check-in Appointment',
+        value: 'APPOINTMENT_CHECKIN',
+        imgSrc: require('../assets/icons/appointment.png'),
+        color: colors.green,
+    },
+    {
+        id: 6,
+        isSelected: false,
+        name: 'Prescribed Appointment',
+        value: 'PRESCRIBED_APPOINTMENT',
+        imgSrc: require('../assets/icons/prescription.png'),
+        color: colors.primary,
+    },
+    {
+        id: 7,
+        isSelected: false,
+        name: 'Completed Appointment',
+        value: 'APPOINTMENT_INVOICE',
+        imgSrc: require('../assets/icons/invoice.png'),
+        color: colors.darkGreen,
+    },
+    {
+        id: 8,
+        isSelected: false,
+        name: 'Cancelled Appointment',
+        value: 'APPOINTMENT_DELAY',
+        imgSrc: require('../assets/icons/time-left.png'),
+        color: colors.yellow,
+    },
+];

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "213460996734",
+    "project_id": "hru-today-staff",
+    "storage_bucket": "hru-today-staff.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:213460996734:android:51d608710e71484df03e2f",
+        "android_client_info": {
+          "package_name": "today.hru.staff"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFNQNj8j01DVkoFwqeFHq6mgnXGZl7NPU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

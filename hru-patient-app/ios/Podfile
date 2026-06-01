@@ -1,0 +1,58 @@
+def node_require(script)
+  require Pod::Executable.execute_command('node', ['-p',
+    "require.resolve('#{script}', {paths: [process.argv[1]]})", __dir__]).strip
+end
+
+node_require('react-native/scripts/react_native_pods.rb')
+node_require('react-native-permissions/scripts/setup.rb')
+
+platform :ios, min_ios_version_supported
+prepare_react_native_project!
+
+use_frameworks! :linkage => :static
+
+setup_permissions([
+  'Camera',
+  'PhotoLibrary',
+  'Notifications',
+  'LocationWhenInUse'
+])
+
+target 'HRUNewVersion' do
+  config = use_native_modules!
+
+  use_react_native!(
+    :path => config[:reactNativePath],
+    :app_path => "#{Pod::Config.instance.installation_root}/.."
+  )
+
+  post_install do |installer|
+    react_native_post_install(
+      installer,
+      config[:reactNativePath],
+      :mac_catalyst_enabled => false,
+    )
+
+    # Fix project-level build settings
+    installer.pods_project.build_configurations.each do |build_config|
+      build_config.build_settings['CLANG_CXX_LANGUAGE_STANDARD'] = 'c++20'
+      build_config.build_settings['CLANG_CXX_LIBRARY'] = 'libc++'
+    end
+
+    # Fix all target-level build settings
+    installer.pods_project.targets.each do |target|
+      target.build_configurations.each do |build_config|
+        build_config.build_settings['CLANG_CXX_LANGUAGE_STANDARD'] = 'c++20'
+        build_config.build_settings['CLANG_CXX_LIBRARY'] = 'libc++'
+        build_config.build_settings['OTHER_CPLUSPLUSFLAGS'] = '$(inherited) -std=c++20'
+      end
+    end
+
+    # Nuclear option: directly patch the pbxproj file
+    pbxproj_path = installer.pods_project.path.to_s + "/project.pbxproj"
+    content = File.read(pbxproj_path)
+    content = content.gsub('CLANG_CXX_LANGUAGE_STANDARD = "gnu++14"', 'CLANG_CXX_LANGUAGE_STANDARD = "c++20"')
+    File.write(pbxproj_path, content)
+    puts "✅ Patched gnu++14 -> c++20 in #{pbxproj_path}"
+  end
+end
